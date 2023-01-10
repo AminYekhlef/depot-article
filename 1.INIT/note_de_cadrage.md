@@ -13,6 +13,9 @@
 ### THEMATIQUE RETENUE
 <!-- justifier la thématique en rappelant notamment le contexte des entreprises des différents alternants membres de l'équipe -->
 
+### BIBLIOGRAPHIE
+<!-- liste des articles académiques pour étayer votre propos -->
+
 ## OBJECTIFS DU PROJET
 
 ### PRINCIPAUX LIVRABLES DU PROJET
