@@ -1,1 +1,1 @@
-# depot-article
+# Dépôt du projet article
