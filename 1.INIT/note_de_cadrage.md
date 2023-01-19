@@ -13,6 +13,16 @@
 ### THEMATIQUE RETENUE
 <!-- justifier la thématique en rappelant notamment le contexte des entreprises des différents alternants membres de l'équipe -->
 
+### DESCRIPTION
+
+| Dimension / Entreprise | Entreprise Etudiant 1 | Entreprise Etudiant 2 | Entreprise Etudiant 2 |
+|------------------------|-----------------------|-----------------------|-----------------------|
+| Domaine d'activité     |                       |                       |                       |
+| Service                |                       |                       |                       |
+| Nombre de salariés     |                       |                       |                       |
+| Type de projets        |                       |                       |                       |
+| Délai                  |                       |                       |                       |
+
 ### BIBLIOGRAPHIE
 <!-- liste des articles académiques pour étayer votre propos -->
 
