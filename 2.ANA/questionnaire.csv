@@ -1,0 +1,26 @@
+﻿Questionnaire
+;
+;Interlocuteurs
+;Interlocuteur 1
+;Contact entreprise : personne répondant aux questions
+;Meneur de l'entretien : étudiant
+;Interlocuteur 2
+;Contact entreprise : personne répondant aux questions
+;Meneur de l'entretien : étudiant
+;Interlocuteur 3
+;Contact entreprise : personne répondant aux questions
+;Meneur de l'entretien : étudiant
+;
+;Liste de questions
+;
+ID;Libellé Question;Interlocuteur 1;Interlocuteur 2;Interlocuteur 3
+"01";;;;
+"02";;;;
+"03";;;;
+"04";;;;
+"05";;;;
+"06";;;;
+"07";;;;
+"08";;;;
+"09";;;;
+"10";;;;
