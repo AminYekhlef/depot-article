@@ -16,10 +16,21 @@ Utiliser le tableau uniquement si les questions diffèrent entre les interloucte
 
 
 ## Liste de questions
+
+
+### Questionnaire unifié
+
+| ID | Libellé Question |
+|----|------------------|
+| 01 |                  |
+| 02 |                  |
+
+### Questions différenciées
 <!-- exemple de remplissage 
 question 01 : posée aux 3 interlocuteurs
 question 02 : posée seulement à l'interlocuteur 1
 -->
+
 | ID | Libellé Question | Interlocuteur 1 | Interlocuteur 2 | Interlocuteur 3 |
 |----|------------------|-----------------|-----------------|-----------------|
 | 01 |                  |         x       |        x        |      x          |
