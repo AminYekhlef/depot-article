@@ -7,7 +7,7 @@
   - cr_reunion_avancement : contient autant de répertoire que de réunions d'avancement (une par semaine)
     - aaaammjj : le répertoire a pour nom la date à laquelle a eu lieu la réunion d'avancement
       - [cr.md](0.SUIVI/cr_reunion_avancement/20230124/cr.md) : contient la liste des tâches dont la date (non vide) a été modifié et la justification de cette modification
-      - liste_nouvelles_taches.htmlm : voir la diapo 14 du support _reunion_avancement.pdf_
+      - liste_nouvelles_taches.html : voir la diapo 14 du support _reunion_avancement.pdf_
       - liste_taches_en_retard.html : voir la diapo 13 du support _reunion_avancement.pdf_
 - __1.INIT__ : répertoire pour les fichiers d'initialisation et de lancement du projet
   - [note_de_cadrage.md](https://prodageo.github.io/depot-article/1.INIT/note_de_cadrage.md) : la note de cadrage avec l'ensemble des caractéristiques du projet. A noter que le macro-planning est vide (il est à consulter sur Jira, menu _Feuille de route_)
