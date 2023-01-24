@@ -1,17 +1,17 @@
 # Trame du dépôt du projet article
-Lorsque nécessaire, des informations pourrront être communiquées sur https://prodageo.github.io/depot-article/.
+<!-- Lorsque nécessaire, des informations pourrront être communiquées sur https://prodageo.github.io/depot-article/. -->
 
-## Organisation du référentiel de livraison
+## Organisation du référentiel de livraison (Github)
 ![](https://i.imgur.com/OrzkLUN.png)
-- 0.SUIVI : répertoire pour les fichiers de la gestion de projets
+- __0.SUIVI__ : répertoire pour les fichiers de la gestion de projets
   - cr_reunion_avancement : contient autant de répertoire que de réunions d'avancement (une par semaine)
     - aaaammjj : le répertoire a pour nom la date à laquelle a eu lieu la réunion d'avancement
       - [cr.md](0.SUIVI/cr_reunion_avancement/20230124/cr.md) : contient la liste des tâches dont la date (non vide) a été modifié et la justification de cette modification
       - liste_nouvelles_taches.htmlm : voir la diapo 14 du support _reunion_avancement.pdf_
       - liste_taches_en_retard.html : voir la diapo 13 du support _reunion_avancement.pdf_
-- 1.INIT : répertoire pour les fichiers d'initialisation et de lancement du projet
+- __1.INIT__ : répertoire pour les fichiers d'initialisation et de lancement du projet
   - [note_de_cadrage.md](https://prodageo.github.io/depot-article/1.INIT/note_de_cadrage.md) : la note de cadrage avec l'ensemble des caractéristiques du projet. A noter que le macro-planning est vide (il est à consulter sur Jira, menu _Feuille de route_)
-- 2.ANA : répertoire pour les fichiers d'analyse (analyse de la situation, contact avec le réel)
+- __2.ANA__ : répertoire pour les fichiers d'analyse (analyse de la situation, contact avec le réel)
   - [questionnaire.md](https://prodageo.github.io/depot-article/2.ANA/questionnaire.md) : liste des interlocuteurs retenus pour l'entretien et questions qui leur sont adressées
     - autres formats :
       - [questionnaire.csv](https://prodageo.github.io/depot-article/2.ANA/questionnaire.csv)
