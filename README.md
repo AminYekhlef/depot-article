@@ -6,7 +6,7 @@ Lorsque nécessaire, des informations pourrront être communiquées sur https://
 - 0.SUIVI : répertoire pour les fichiers de la gestion de projets
   - cr_reunion_avancement : contient autant de répertoire que de réunions d'avancement (une par semaine)
     - aaaammjj : le répertoire a pour nom la date à laquelle a eu lieu la réunion d'avancement
-      - [cr.md](0.SUIVI/cr_reunion_avancement/20230124) : contient la liste des tâches dont la date (non vide) a été modifié et la justification de cette modification
+      - [cr.md](0.SUIVI/cr_reunion_avancement/20230124/cr.md) : contient la liste des tâches dont la date (non vide) a été modifié et la justification de cette modification
       - liste_nouvelles_taches.htmlm : voir la diapo 14 du support _reunion_avancement.pdf_
       - liste_taches_en_retard.html : voir la diapo 13 du support _reunion_avancement.pdf_
 - 1.INIT : répertoire pour les fichiers d'initialisation et de lancement du projet
