@@ -16,8 +16,11 @@ Utiliser le tableau uniquement si les questions diffèrent entre les interloucte
 
 
 ## Liste de questions
+<!-- exemple de remplissage 
+question 01 : posée aux 3 interlocuteurs
+question 02 : posée seulement à l'interlocuteur 1
+-->
 | ID | Libellé Question | Interlocuteur 1 | Interlocuteur 2 | Interlocuteur 3 |
 |----|------------------|-----------------|-----------------|-----------------|
-| 01 |                  |                 |                 |                 |
-| 02 |                  |                 |                 |                 |
-| 03 |                  |                 |                 |                 |
+| 01 |                  |         x       |        x        |      x          |
+| 02 |                  |         x       |                 |                 |
