@@ -1,6 +1,8 @@
 # Trame du dépôt du projet article
 Lorsque nécessaire, des informations pourrront être communiquées sur https://prodageo.github.io/depot-article/.
 
+## Organisation du référentiel de livraison
+![](https://i.imgur.com/OrzkLUN.png)
 - 0.SUIVI : répertoire pour les fichiers de la gestion de projets
   - cr_reunion_avancement : contient autant de répertoire que de réunions d'avancement (une par semaine)
     - aaaammjj : le répertoire a pour nom la date à laquelle a eu lieu la réunion d'avancement
