@@ -1,1 +1,384 @@
-export de Jira
+<!DOCTYPE html>
+<html class="mozilla"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Jira</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"\"";
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-rest:curl.cross-origin-resources"]="false";
+WRM._unparsedData["jira.webresources:feature-flags.feature-flag-data"]="{\"enabled-feature-keys\":[\"com.atlassian.jira.projects.issuenavigator\",\"connect.no-applinks\",\"nps.survey.inline.dialog\",\"atlassian.aui.raphael.disabled\",\"com.atlassian.jira.projects.ProjectCentricNavigation.Switch\"],\"feature-flag-states\":{\"com.atlassian.jira.plugins.mail.internal\":false,\"jira.feature.flag.board.issue.modal.labs\":true,\"com.atlassian.jira.feature.flag.for.TestFeatureFlagResource\":false,\"jira.feature.rest.single.step.avatar.upload\":true,\"jira.ondemand.maintain.trusted.apps\":true}}";
+WRM._unparsedData["com.atlassian.jira.jira-client-analytics-plugin:analytics-context-provider.client-analytic-descriptors"]="{\"analyticsResource\":{\"jira-core\":{\"events\":{\"issue.comment.added\":{\"trigger\":\"click #issue-comment-add-submit\",\"properties\":{\"comment-length\":\"value.length #issue-comment-add #comment\"}}}}},\"tenantId\":\"0b9bf61a-ffb4-4e01-99cb-5c484fb12695\",\"aid\":\"604e851881b82500681ec2b8\",\"env\":\"prod\"}";
+WRM._unparsedData["jira.webresources:default-comment-security-level.DefaultCommentSecurityLevelHelpLink"]="{\"extraClasses\":\"default-comment-level-help\",\"title\":\"Commenting on an Issue\",\"url\":\"https://confluence.atlassian.com/display/JIRASOFTWARECLOUD/Editing+and+collaborating+on+issues#Editingandcollaboratingonissues-addcommentsCommentingonissues\",\"isLocal\":false}";
+WRM._unparsedData["jira.webresources:key-commands.shortcuts"]="[{\"moduleKey\":\"go-to-dashboard-kb-shortcut\",\"keys\":[[\"g\",\"d\"]],\"context\":\"global\",\"op\":\"goTo\",\"param\":\"/secure/Dashboard.jspa\"},{\"moduleKey\":\"greenhopper-gh-shortcut\",\"keys\":[[\"g\",\"h\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"gh.app.globalkeyboardshortcuts.goToAgile();\"},{\"moduleKey\":\"browse-project-kb-shortcut\",\"keys\":[[\"g\",\"p\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"var elem = jQuery(\\\"#browse_link\\\");\\n                if (elem.length \u003e 0) {\\n                    window.location.href = elem.attr(\\\"href\\\");\\n                }\"},{\"moduleKey\":\"greenhopper-agile-shortcut\",\"keys\":[[\"g\",\"a\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"gh.app.globalkeyboardshortcuts.goToAgile();\"},{\"moduleKey\":\"issue-navigator-kb-shortcut\",\"keys\":[[\"g\",\"i\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"var elem = jQuery(\\\"#find_link\\\");\\n                if (elem.length \u003e 0) {\\n                    window.location.href = elem.attr(\\\"href\\\");\\n                }\"},{\"moduleKey\":\"admin.quicksearch.dialog.shortcut\",\"keys\":[[\"g\",\"g\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"JIRA.Shifter.show();\"},{\"moduleKey\":\"quicksearch\",\"keys\":[[\"/\"]],\"context\":\"global\",\"op\":\"moveToAndFocus\",\"param\":\"#quickSearchInput, #admin-quick-nav-field\"},{\"moduleKey\":\"create.issue\",\"keys\":[[\"c\"]],\"context\":\"global\",\"op\":\"moveToAndClick\",\"param\":\"#header .create-issue\"},{\"moduleKey\":\"shifter\",\"keys\":[[\".\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"JIRA.Shifter.show();\"},{\"moduleKey\":\"help\",\"keys\":[[\"?\"]],\"context\":\"global\",\"op\":\"click\",\"param\":\"#keyshortscuthelp\"}]";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="Effectu%C3%A9(1)_fichiers/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="Effectu%C3%A9(1)_fichiers/com.atlassian.auiplugin%20aui-labels.css" data-wrm-key="com.atlassian.auiplugin:aui-labels" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="Effectu%C3%A9(1)_fichiers/jira.webresources%20theme-adg3.css" data-wrm-key="jira.webresources:theme-adg3" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="Effectu%C3%A9(1)_fichiers/jira.webresources%20global-static.css" data-wrm-key="jira.webresources:global-static" data-wrm-batch-type="resource" media="all">
+<script type="text/javascript" src="Effectu%C3%A9(1)_fichiers/batch_002.js" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script><style type="text/css"></style><style type="text/css"></style>
+<script type="text/javascript" src="Effectu%C3%A9(1)_fichiers/jira.webresources%20global-static.js" data-wrm-key="jira.webresources:global-static" data-wrm-batch-type="resource" data-initially-rendered=""></script>
+<script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["_wrmBatchContents"]="{\"js\":{\"_super\":[\"jira.webresources:es6-promise\",\"jira.webresources:promise-polyfill\",\"jira.webresources:usertiming-polyfill\",\"jira.webresources:almond\",\"jira.webresources:almond-analytics\",\"com.atlassian.auiplugin:aui-reset\",\"com.atlassian.auiplugin:aui-page-typography\",\"com.atlassian.auiplugin:aui-avatars\",\"com.atlassian.auiplugin:aui-page-layout\",\"com.atlassian.plugins.atlassian-plugins-webresource-plugin:data\",\"com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path\",\"com.atlassian.auiplugin:ajs-contextpath\",\"com.atlassian.plugins.jquery:jquery-1.7.2\",\"com.atlassian.plugins.jquery:jquery\",\"com.atlassian.auiplugin:jquery-lib\",\"com.atlassian.auiplugin:jquery-compatibility\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-polyfills-console\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-jquery\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-create-element\",\"com.atlassian.auiplugin:internal-object-assign-4.0.1-index\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-globalize\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-deprecation\",\"com.atlassian.auiplugin:aui-deprecation\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-polyfills-custom-event\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-constants\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-version\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-globals\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-data\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-mutation-observer\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-utils\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-registry\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-lifecycle\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-fix-ie-innerhtml\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-document-observer\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-skate\",\"com.atlassian.auiplugin:internal-tether-0.6.5-tether\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-version\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-prevent-default\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-stop-event\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-index-of\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-contains\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-include\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-toggle-class-name\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-set-visible\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-set-current\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-is-visible\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-is-clipped\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-params\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-populate-parameters\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-log\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-to-init\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-firebug\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-clone\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-alphanum\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-on-text-resize\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-unbind-text-resize\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-escape\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-escape-html\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-filter-by-search\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-debounce\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-unique-id\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-add-id\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-forms\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-setup\",\"com.atlassian.auiplugin:deprecated-legacy-ajs-file\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-format\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-animation\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-blanket\",\"com.atlassian.auiplugin:aui-core\",\"com.atlassian.auiplugin:internal-basic-css\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-jquery-plugins-jquery-aop\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-drop-down\",\"com.atlassian.auiplugin:dropdown\",\"com.atlassian.auiplugin:icons\",\"com.atlassian.auiplugin:table\",\"com.atlassian.auiplugin:internal-form-css\",\"com.atlassian.auiplugin:internal-message-css\",\"com.atlassian.auiplugin:ajs-gadgets-base\",\"com.atlassian.auiplugin:toolbar\",\"com.atlassian.auiplugin:aui-buttons\",\"com.atlassian.auiplugin:aui-toolbar2\",\"com.atlassian.soy.soy-template-plugin:soy-deps\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-widget\",\"com.atlassian.auiplugin:internal-aui-widget\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-i18n-aui\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-i18n\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-skate\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-navigation\",\"com.atlassian.auiplugin:aui-navigation\",\"com.atlassian.auiplugin:aui-experimental-iconfont\",\"com.atlassian.auiplugin:aui-header-unresponsive\",\"com.atlassian.auiplugin:internal-skatejs-template-html-0.0.0-dist-template-html\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-header-create-header\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-header\",\"com.atlassian.auiplugin:aui-header\",\"com.atlassian.auiplugin:aui-page-header\",\"com.atlassian.auiplugin:aui-page-suite\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-focus-manager\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-key-code\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-layer\",\"com.atlassian.auiplugin:aui-focus-manager\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-layer-manager\",\"com.atlassian.auiplugin:keycode\",\"com.atlassian.auiplugin:aui-layer-manager\",\"com.atlassian.auiplugin:layer\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-alignment\",\"com.atlassian.auiplugin:aui-alignment\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-browser\",\"com.atlassian.auiplugin:internal-aui-browser\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-state\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-dropdown2\",\"com.atlassian.auiplugin:aui-dropdown2\",\"com.atlassian.auiplugin:internal-fancy-file-input-2.0.1-dist-fancy-file-input\",\"com.atlassian.auiplugin:internal-src-js-aui-fancy-file-input\",\"com.atlassian.auiplugin:fancy-file-input\",\"com.atlassian.auiplugin:hotkeys\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-event\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-dialog\",\"com.atlassian.auiplugin:dialog\",\"com.atlassian.auiplugin:internal-css.escape-1.5.0-css-escape\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-inline-dialog\",\"com.atlassian.auiplugin:internal-inline-dialog-common\",\"com.atlassian.auiplugin:inline-dialog\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-template\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-messages\",\"com.atlassian.auiplugin:message\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-tabs\",\"com.atlassian.auiplugin:tabs\",\"com.atlassian.auiplugin:jquery-ui-core-1.8.24-patched\",\"com.atlassian.auiplugin:jquery-ui-core\",\"com.atlassian.auiplugin:internal-jquery-ui-partial\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-jquery-jquery-hotkeys\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-jquery-jquery-moveto\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-underscorejs-underscore\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-underscore\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-when-i-type\",\"com.atlassian.auiplugin:internal-keyboardshortcuts\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-cookie\",\"com.atlassian.auiplugin:cookie\",\"com.atlassian.auiplugin:template\",\"com.atlassian.auiplugin:event\",\"com.atlassian.auiplugin:internal-ajs-no-context-path\",\"com.atlassian.auiplugin:ajs\",\"com.atlassian.auiplugin:jquery-ui\",\"com.atlassian.plugin.jslibs:jquery.textoverflow-0.7.4\",\"com.atlassian.plugin.jslibs:jquery.pjax-2011.07.10\",\"com.atlassian.plugin.jslibs:jquery.lazyload-1.8.0\",\"com.atlassian.plugin.jslibs:jquery.flot-0.7\",\"com.atlassian.plugin.jslibs:jquery.effects-1.8rc3\",\"com.atlassian.plugin.jslibs:jquery.dragtable-2.0.4\",\"com.atlassian.plugin.jslibs:jquery.serializeobject-0.2\",\"com.atlassian.plugin.jslibs:jquery.scrollintoview-1.8\",\"jira.webresources:jquery\",\"jira.webresources:aui-core-amd-shim\",\"com.atlassian.auiplugin:aui-badge\",\"com.atlassian.auiplugin:aui-lozenge\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-spin-spin\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-jquery-jquery-spin\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-spin\",\"com.atlassian.auiplugin:aui-spinner\",\"com.atlassian.auiplugin:aui-experimental-spinner\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-amdify\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-flag\",\"com.atlassian.auiplugin:aui-flag\",\"com.atlassian.plugins.atlassian-plugins-webresource-rest:curl\",\"com.atlassian.plugins.atlassian-plugins-webresource-rest:require-handler-v2\",\"com.atlassian.plugins.atlassian-plugins-webresource-rest:web-resource-manager\",\"com.atlassian.plugin.jslibs:skate-0.12.6-new\",\"com.atlassian.plugin.jslibs:skate-0.12.6\",\"jira.webresources:skate\",\"jira.webresources:icons\",\"jira.webresources:jira-logger\",\"jira.webresources:deprecator\",\"jira.webresources:legacy-namespacing\",\"com.atlassian.auiplugin:ajs-underscorejs\",\"jira.webresources:ajs-underscorejs-amd-shim\",\"jira.webresources:jira-metadata\",\"jira.webresources:aui-extensions\",\"jira.webresources:feature-flags\",\"jira.webresources:jira-events\",\"jira.webresources:jira-formatter\",\"jira.webresources:browser-properties\",\"jira.webresources:top-same-origin-window\",\"jira.webresources:util-lite\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-backbone-backbone\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-backbone\",\"com.atlassian.auiplugin:ajs-backbone\",\"jira.webresources:ajs-backbone-amd-shim\",\"jira.webresources:number-formatter\",\"jira.webresources:util\",\"jira.webresources:content-retrievers\",\"jira.webresources:list-styles\",\"jira.webresources:inline-layer\",\"jira.webresources:list\",\"jira.webresources:dropdown\",\"jira.webresources:issue-table-adg3\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-jquery-jquery-tipsy\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-tipsy\",\"com.atlassian.auiplugin:aui-tipsy\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-tooltip\",\"com.atlassian.auiplugin:aui-tooltips\",\"com.atlassian.auiplugin:aui-experimental-tooltips\",\"com.atlassian.plugins.issue-status-plugin:issue-status-resources\",\"jira.webresources:issue-statuses\",\"jira.webresources:issue-table\",\"jira.webresources:select-model\",\"jira.webresources:general-configuration\",\"com.atlassian.auiplugin:aui-experimental-soy-templates\",\"jira.webresources:js-soy-templates\",\"jira.webresources:page-loading-indicator\",\"jira.webresources:messages\",\"jira.webresources:jira-dialog-core\",\"com.atlassian.jira.jira-issue-nav-plugin:issues-api\",\"com.atlassian.jira.jira-issue-nav-plugin:issuenav-legacy\",\"jira.webresources:jira-issuenavigator\",\"jira.webresources:jira-dialog-config\",\"jira.webresources:set-focus\",\"jira.webresources:select-pickers\",\"jira.webresources:jira-analytics-amd\",\"jira.webresources:trigger-custom-event\",\"com.atlassian.jira.jira-client-analytics-plugin:analytics-web-client-library\",\"com.atlassian.jira.jira-client-analytics-plugin:analytics-context-provider\",\"com.atlassian.jira.jira-client-analytics-plugin:analytics-events-transformers\",\"com.atlassian.jira.jira-client-analytics-plugin:analytics-web-client\",\"jira.webresources:shifter\",\"com.atlassian.jira.jira-npmbridge-plugin:atlassian-spa-iframe-amd\",\"com.atlassian.plugins.browser.metrics.browser-metrics-plugin:api\",\"com.atlassian.jira.jira-atlaskit-plugin:sidebar\",\"com.atlassian.jira.jira-atlaskit-plugin:forge\",\"com.atlassian.jira.jira-atlaskit-plugin:container-api\",\"jira.webresources:inline-attach\",\"jira.webresources:dialogs\",\"jira.webresources:default-comment-security-level\",\"jira.webresources:dropdown-select\",\"jira.webresources:user-management\",\"jira.webresources:mentions-base\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-progressive-data-set\",\"com.atlassian.auiplugin:aui-experimental-data-handlers\",\"jira.webresources:data-sets\",\"jira.webresources:mentions-feature\",\"jira.webresources:mentions\",\"jira.webresources:jira-edition\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-banner\",\"com.atlassian.auiplugin:aui-banner\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-trigger\",\"com.atlassian.auiplugin:aui-trigger\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-attributes\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-enforcer\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-inline-dialog2\",\"com.atlassian.auiplugin:aui-inline-dialog2\",\"jira.webresources:keyboard-shortcut-toggle\",\"jira.webresources:assignee-picker\",\"jira.webresources:jira-global\",\"jira.webresources:key-commands\",\"jira.webresources:header\",\"jira.webresources:superbatch-default\",\"_context:_super\"]},\"css\":{\"_super\":[\"jira.webresources:es6-promise\",\"jira.webresources:promise-polyfill\",\"jira.webresources:usertiming-polyfill\",\"jira.webresources:almond\",\"jira.webresources:almond-analytics\",\"com.atlassian.auiplugin:aui-reset\",\"com.atlassian.auiplugin:aui-page-typography\",\"com.atlassian.auiplugin:aui-avatars\",\"com.atlassian.auiplugin:aui-page-layout\",\"com.atlassian.plugins.atlassian-plugins-webresource-plugin:data\",\"com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path\",\"com.atlassian.auiplugin:ajs-contextpath\",\"com.atlassian.plugins.jquery:jquery-1.7.2\",\"com.atlassian.plugins.jquery:jquery\",\"com.atlassian.auiplugin:jquery-lib\",\"com.atlassian.auiplugin:jquery-compatibility\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-polyfills-console\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-jquery\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-create-element\",\"com.atlassian.auiplugin:internal-object-assign-4.0.1-index\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-globalize\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-deprecation\",\"com.atlassian.auiplugin:aui-deprecation\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-polyfills-custom-event\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-constants\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-version\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-globals\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-data\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-mutation-observer\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-utils\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-registry\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-lifecycle\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-fix-ie-innerhtml\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-document-observer\",\"com.atlassian.auiplugin:internal-skatejs-0.13.17-lib-skate\",\"com.atlassian.auiplugin:internal-tether-0.6.5-tether\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-version\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-prevent-default\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-stop-event\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-index-of\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-contains\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-include\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-toggle-class-name\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-set-visible\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-set-current\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-is-visible\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-is-clipped\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-params\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-populate-parameters\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-log\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-to-init\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-firebug\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-clone\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-alphanum\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-on-text-resize\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-unbind-text-resize\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-escape\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-escape-html\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-filter-by-search\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-debounce\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-unique-id\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-add-id\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-forms\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-setup\",\"com.atlassian.auiplugin:deprecated-legacy-ajs-file\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-format\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-animation\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-blanket\",\"com.atlassian.auiplugin:aui-core\",\"com.atlassian.auiplugin:internal-basic-css\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-jquery-plugins-jquery-aop\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-drop-down\",\"com.atlassian.auiplugin:dropdown\",\"com.atlassian.auiplugin:icons\",\"com.atlassian.auiplugin:table\",\"com.atlassian.auiplugin:internal-form-css\",\"com.atlassian.auiplugin:internal-message-css\",\"com.atlassian.auiplugin:ajs-gadgets-base\",\"com.atlassian.auiplugin:toolbar\",\"com.atlassian.auiplugin:aui-buttons\",\"com.atlassian.auiplugin:aui-toolbar2\",\"com.atlassian.soy.soy-template-plugin:soy-deps\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-widget\",\"com.atlassian.auiplugin:internal-aui-widget\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-i18n-aui\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-i18n\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-skate\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-navigation\",\"com.atlassian.auiplugin:aui-navigation\",\"com.atlassian.auiplugin:aui-experimental-iconfont\",\"com.atlassian.auiplugin:aui-header-unresponsive\",\"com.atlassian.auiplugin:internal-skatejs-template-html-0.0.0-dist-template-html\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-header-create-header\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-header\",\"com.atlassian.auiplugin:aui-header\",\"com.atlassian.auiplugin:aui-page-header\",\"com.atlassian.auiplugin:aui-page-suite\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-focus-manager\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-key-code\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-layer\",\"com.atlassian.auiplugin:aui-focus-manager\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-layer-manager\",\"com.atlassian.auiplugin:keycode\",\"com.atlassian.auiplugin:aui-layer-manager\",\"com.atlassian.auiplugin:layer\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-alignment\",\"com.atlassian.auiplugin:aui-alignment\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-browser\",\"com.atlassian.auiplugin:internal-aui-browser\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-state\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-dropdown2\",\"com.atlassian.auiplugin:aui-dropdown2\",\"com.atlassian.auiplugin:internal-fancy-file-input-2.0.1-dist-fancy-file-input\",\"com.atlassian.auiplugin:internal-src-js-aui-fancy-file-input\",\"com.atlassian.auiplugin:fancy-file-input\",\"com.atlassian.auiplugin:hotkeys\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-event\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-dialog\",\"com.atlassian.auiplugin:dialog\",\"com.atlassian.auiplugin:internal-css.escape-1.5.0-css-escape\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-inline-dialog\",\"com.atlassian.auiplugin:internal-inline-dialog-common\",\"com.atlassian.auiplugin:inline-dialog\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-template\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-messages\",\"com.atlassian.auiplugin:message\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-tabs\",\"com.atlassian.auiplugin:tabs\",\"com.atlassian.auiplugin:jquery-ui-core-1.8.24-patched\",\"com.atlassian.auiplugin:jquery-ui-core\",\"com.atlassian.auiplugin:internal-jquery-ui-partial\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-jquery-jquery-hotkeys\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-jquery-jquery-moveto\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-underscorejs-underscore\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-underscore\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-when-i-type\",\"com.atlassian.auiplugin:internal-keyboardshortcuts\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-cookie\",\"com.atlassian.auiplugin:cookie\",\"com.atlassian.auiplugin:template\",\"com.atlassian.auiplugin:event\",\"com.atlassian.auiplugin:internal-ajs-no-context-path\",\"com.atlassian.auiplugin:ajs\",\"com.atlassian.auiplugin:jquery-ui\",\"com.atlassian.plugin.jslibs:jquery.textoverflow-0.7.4\",\"com.atlassian.plugin.jslibs:jquery.pjax-2011.07.10\",\"com.atlassian.plugin.jslibs:jquery.lazyload-1.8.0\",\"com.atlassian.plugin.jslibs:jquery.flot-0.7\",\"com.atlassian.plugin.jslibs:jquery.effects-1.8rc3\",\"com.atlassian.plugin.jslibs:jquery.dragtable-2.0.4\",\"com.atlassian.plugin.jslibs:jquery.serializeobject-0.2\",\"com.atlassian.plugin.jslibs:jquery.scrollintoview-1.8\",\"jira.webresources:jquery\",\"jira.webresources:aui-core-amd-shim\",\"com.atlassian.auiplugin:aui-badge\",\"com.atlassian.auiplugin:aui-lozenge\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-spin-spin\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-jquery-jquery-spin\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-spin\",\"com.atlassian.auiplugin:aui-spinner\",\"com.atlassian.auiplugin:aui-experimental-spinner\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-amdify\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-flag\",\"com.atlassian.auiplugin:aui-flag\",\"com.atlassian.plugins.atlassian-plugins-webresource-rest:curl\",\"com.atlassian.plugins.atlassian-plugins-webresource-rest:require-handler-v2\",\"com.atlassian.plugins.atlassian-plugins-webresource-rest:web-resource-manager\",\"com.atlassian.plugin.jslibs:skate-0.12.6-new\",\"com.atlassian.plugin.jslibs:skate-0.12.6\",\"jira.webresources:skate\",\"jira.webresources:icons\",\"jira.webresources:jira-logger\",\"jira.webresources:deprecator\",\"jira.webresources:legacy-namespacing\",\"com.atlassian.auiplugin:ajs-underscorejs\",\"jira.webresources:ajs-underscorejs-amd-shim\",\"jira.webresources:jira-metadata\",\"jira.webresources:aui-extensions\",\"jira.webresources:feature-flags\",\"jira.webresources:jira-events\",\"jira.webresources:jira-formatter\",\"jira.webresources:browser-properties\",\"jira.webresources:top-same-origin-window\",\"jira.webresources:util-lite\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-backbone-backbone\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-backbone\",\"com.atlassian.auiplugin:ajs-backbone\",\"jira.webresources:ajs-backbone-amd-shim\",\"jira.webresources:number-formatter\",\"jira.webresources:util\",\"jira.webresources:content-retrievers\",\"jira.webresources:list-styles\",\"jira.webresources:inline-layer\",\"jira.webresources:list\",\"jira.webresources:dropdown\",\"jira.webresources:issue-table-adg3\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-vendor-jquery-jquery-tipsy\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-tipsy\",\"com.atlassian.auiplugin:aui-tipsy\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-tooltip\",\"com.atlassian.auiplugin:aui-tooltips\",\"com.atlassian.auiplugin:aui-experimental-tooltips\",\"com.atlassian.plugins.issue-status-plugin:issue-status-resources\",\"jira.webresources:issue-statuses\",\"jira.webresources:issue-table\",\"jira.webresources:select-model\",\"jira.webresources:general-configuration\",\"com.atlassian.auiplugin:aui-experimental-soy-templates\",\"jira.webresources:js-soy-templates\",\"jira.webresources:page-loading-indicator\",\"jira.webresources:messages\",\"jira.webresources:jira-dialog-core\",\"com.atlassian.jira.jira-issue-nav-plugin:issues-api\",\"com.atlassian.jira.jira-issue-nav-plugin:issuenav-legacy\",\"jira.webresources:jira-issuenavigator\",\"jira.webresources:jira-dialog-config\",\"jira.webresources:set-focus\",\"jira.webresources:select-pickers\",\"jira.webresources:jira-analytics-amd\",\"jira.webresources:trigger-custom-event\",\"com.atlassian.jira.jira-client-analytics-plugin:analytics-web-client-library\",\"com.atlassian.jira.jira-client-analytics-plugin:analytics-context-provider\",\"com.atlassian.jira.jira-client-analytics-plugin:analytics-events-transformers\",\"com.atlassian.jira.jira-client-analytics-plugin:analytics-web-client\",\"jira.webresources:shifter\",\"com.atlassian.jira.jira-npmbridge-plugin:atlassian-spa-iframe-amd\",\"com.atlassian.plugins.browser.metrics.browser-metrics-plugin:api\",\"com.atlassian.jira.jira-atlaskit-plugin:sidebar\",\"com.atlassian.jira.jira-atlaskit-plugin:forge\",\"com.atlassian.jira.jira-atlaskit-plugin:container-api\",\"jira.webresources:inline-attach\",\"jira.webresources:dialogs\",\"jira.webresources:default-comment-security-level\",\"jira.webresources:dropdown-select\",\"jira.webresources:user-management\",\"jira.webresources:mentions-base\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-progressive-data-set\",\"com.atlassian.auiplugin:aui-experimental-data-handlers\",\"jira.webresources:data-sets\",\"jira.webresources:mentions-feature\",\"jira.webresources:mentions\",\"jira.webresources:jira-edition\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-banner\",\"com.atlassian.auiplugin:aui-banner\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-trigger\",\"com.atlassian.auiplugin:aui-trigger\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-attributes\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-internal-enforcer\",\"com.atlassian.auiplugin:internal-@atlassian-aui-src-js-aui-inline-dialog2\",\"com.atlassian.auiplugin:aui-inline-dialog2\",\"jira.webresources:keyboard-shortcut-toggle\",\"jira.webresources:assignee-picker\",\"jira.webresources:jira-global\",\"jira.webresources:key-commands\",\"jira.webresources:header\",\"jira.webresources:superbatch-default\",\"_context:_super\"]}}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+
+<script type="text/javascript" charset="utf-8" src="Effectu%C3%A9(1)_fichiers/batch.js"></script><script type="text/javascript" charset="utf-8" src="Effectu%C3%A9(1)_fichiers/batch_003.js"></script></head>
+<body id="jira" class="aui-layout aui-theme-default page-type-printable" data-aui-version="6.0.5">
+    
+<div id="printable-content">
+<div class="result-header">
+    <h3><a href="https://23gp3r4.atlassian.net/issues/?jql=statusCategory+%3D+Done+order+by+updated+DESC">Jira</a></h3>
+                        
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                                    <div class="searcherValue">
+    
+            <label class="fieldLabel" for="fieldstatusCategory">statusCategory:</label><span id="fieldstatusCategory" class="fieldValue">
+    
+    Terminé</span></div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="searcherValue">
+            <label class="fieldLabel">Trié par:</label>
+                            Mise à jour ordre décroissant
+                    </div>
+                    <div class="results-count">
+            <b>1</b>–<b>7</b> sur <b>7</b>
+            comme dans&nbsp;: <b>29/janv./23 4:39 AM</b>
+        </div>
+    </div>  
+
+
+
+
+                                        <table id="issuetable" class="aui ">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                                                        T
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                                                        Clé
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                                                        Résumé
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                                                        Responsable
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                                                        Rapporteur
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                                                        Pr
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                                                        État
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                                                        Résolution
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                                                        Création
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                                                        Mise à jour
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                                                        Date d'échéance
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10027" rel="10027" data-issuekey="P3R4-28" class="issuerow">
+                                            <td class="issuetype">    <a class="issue-link" data-issue-key="P3R4-28" href="https://23gp3r4.atlassian.net/browse/P3R4-28">
+            <img src="Effectu%C3%A9(1)_fichiers/10318.svg" alt="Tâche" title="Tâche - Une tâche distincte." width="16" height="16" border="0" align="absmiddle">
+        </a>
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="P3R4-28" href="https://23gp3r4.atlassian.net/browse/P3R4-28">P3R4-28</a>
+</td>
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="P3R4-28" href="https://23gp3r4.atlassian.net/browse/P3R4-28">Rechercher des Chefs de Projets</a>
+    </p>
+</td>
+                                            <td class="assignee">    <em>Non assigné</em>
+</td>
+                                            <td class="reporter">            <span class="tinylink"><a class="user-hover" rel="604e851881b82500681ec2b8" id="reporter_604e851881b82500681ec2b8" data-user="{&quot;accountId&quot;: &quot;604e851881b82500681ec2b8&quot;}" href="https://23gp3r4.atlassian.net/secure/ViewProfile.jspa?accountId=604e851881b82500681ec2b8">Amin Yekhlef</a></span>
+    </td>
+                                            <td class="priority">            <img src="Effectu%C3%A9(1)_fichiers/medium.svg" alt="Medium" title="Medium - Has the potential to affect progress." width="16" height="16" border="0" align="absmiddle">
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Terminé(e)&lt;/span&gt;">Terminé(e)</span>    </td>
+                                            <td class="resolution">    Terminé
+</td>
+                                            <td class="created"> <span title="28/janv./23 9:24 PM"><time datetime="2023-01-28T21:24:18+0100">28/janv./23</time></span> </td>
+                                            <td class="updated"> <span title="29/janv./23 4:34 AM"><time datetime="2023-01-29T04:34:47+0100">29/janv./23</time></span> </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10026" rel="10026" data-issuekey="P3R4-27" class="issuerow">
+                                            <td class="issuetype">    <a class="issue-link" data-issue-key="P3R4-27" href="https://23gp3r4.atlassian.net/browse/P3R4-27">
+            <img src="Effectu%C3%A9(1)_fichiers/10318.svg" alt="Tâche" title="Tâche - Une tâche distincte." width="16" height="16" border="0" align="absmiddle">
+        </a>
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="P3R4-27" href="https://23gp3r4.atlassian.net/browse/P3R4-27">P3R4-27</a>
+</td>
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="P3R4-27" href="https://23gp3r4.atlassian.net/browse/P3R4-27">Lister les articles avec la convention APA</a>
+    </p>
+</td>
+                                            <td class="assignee">    <em>Non assigné</em>
+</td>
+                                            <td class="reporter">            <span class="tinylink"><a class="user-hover" rel="604e851881b82500681ec2b8" id="reporter_604e851881b82500681ec2b8" data-user="{&quot;accountId&quot;: &quot;604e851881b82500681ec2b8&quot;}" href="https://23gp3r4.atlassian.net/secure/ViewProfile.jspa?accountId=604e851881b82500681ec2b8">Amin Yekhlef</a></span>
+    </td>
+                                            <td class="priority">            <img src="Effectu%C3%A9(1)_fichiers/medium.svg" alt="Medium" title="Medium - Has the potential to affect progress." width="16" height="16" border="0" align="absmiddle">
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Terminé(e)&lt;/span&gt;">Terminé(e)</span>    </td>
+                                            <td class="resolution">    Terminé
+</td>
+                                            <td class="created"> <span title="28/janv./23 9:23 PM"><time datetime="2023-01-28T21:23:49+0100">28/janv./23</time></span> </td>
+                                            <td class="updated"> <span title="29/janv./23 4:34 AM"><time datetime="2023-01-29T04:34:36+0100">29/janv./23</time></span> </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10025" rel="10025" data-issuekey="P3R4-26" class="issuerow">
+                                            <td class="issuetype">    <a class="issue-link" data-issue-key="P3R4-26" href="https://23gp3r4.atlassian.net/browse/P3R4-26">
+            <img src="Effectu%C3%A9(1)_fichiers/10318.svg" alt="Tâche" title="Tâche - Une tâche distincte." width="16" height="16" border="0" align="absmiddle">
+        </a>
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="P3R4-26" href="https://23gp3r4.atlassian.net/browse/P3R4-26">P3R4-26</a>
+</td>
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="P3R4-26" href="https://23gp3r4.atlassian.net/browse/P3R4-26">Rédiger les champs administratifs</a>
+    </p>
+</td>
+                                            <td class="assignee">    <em>Non assigné</em>
+</td>
+                                            <td class="reporter">            <span class="tinylink"><a class="user-hover" rel="604e851881b82500681ec2b8" id="reporter_604e851881b82500681ec2b8" data-user="{&quot;accountId&quot;: &quot;604e851881b82500681ec2b8&quot;}" href="https://23gp3r4.atlassian.net/secure/ViewProfile.jspa?accountId=604e851881b82500681ec2b8">Amin Yekhlef</a></span>
+    </td>
+                                            <td class="priority">            <img src="Effectu%C3%A9(1)_fichiers/medium.svg" alt="Medium" title="Medium - Has the potential to affect progress." width="16" height="16" border="0" align="absmiddle">
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Terminé(e)&lt;/span&gt;">Terminé(e)</span>    </td>
+                                            <td class="resolution">    Terminé
+</td>
+                                            <td class="created"> <span title="28/janv./23 8:37 PM"><time datetime="2023-01-28T20:37:49+0100">28/janv./23</time></span> </td>
+                                            <td class="updated"> <span title="29/janv./23 4:06 AM"><time datetime="2023-01-29T04:06:55+0100">29/janv./23</time></span> </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10024" rel="10024" data-issuekey="P3R4-25" class="issuerow">
+                                            <td class="issuetype">    <a class="issue-link" data-issue-key="P3R4-25" href="https://23gp3r4.atlassian.net/browse/P3R4-25">
+            <img src="Effectu%C3%A9(1)_fichiers/10318.svg" alt="Tâche" title="Tâche - Une tâche distincte." width="16" height="16" border="0" align="absmiddle">
+        </a>
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="P3R4-25" href="https://23gp3r4.atlassian.net/browse/P3R4-25">P3R4-25</a>
+</td>
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="P3R4-25" href="https://23gp3r4.atlassian.net/browse/P3R4-25">Corriger la thématique</a>
+    </p>
+</td>
+                                            <td class="assignee">    <em>Non assigné</em>
+</td>
+                                            <td class="reporter">            <span class="tinylink"><a class="user-hover" rel="604e851881b82500681ec2b8" id="reporter_604e851881b82500681ec2b8" data-user="{&quot;accountId&quot;: &quot;604e851881b82500681ec2b8&quot;}" href="https://23gp3r4.atlassian.net/secure/ViewProfile.jspa?accountId=604e851881b82500681ec2b8">Amin Yekhlef</a></span>
+    </td>
+                                            <td class="priority">            <img src="Effectu%C3%A9(1)_fichiers/medium.svg" alt="Medium" title="Medium - Has the potential to affect progress." width="16" height="16" border="0" align="absmiddle">
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Terminé(e)&lt;/span&gt;">Terminé(e)</span>    </td>
+                                            <td class="resolution">    Terminé
+</td>
+                                            <td class="created"> <span title="28/janv./23 8:37 PM"><time datetime="2023-01-28T20:37:13+0100">28/janv./23</time></span> </td>
+                                            <td class="updated"> <span title="28/janv./23 9:46 PM"><time datetime="2023-01-28T21:46:27+0100">28/janv./23</time></span> </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10023" rel="10023" data-issuekey="P3R4-24" class="issuerow">
+                                            <td class="issuetype">    <a class="issue-link" data-issue-key="P3R4-24" href="https://23gp3r4.atlassian.net/browse/P3R4-24">
+            <img src="Effectu%C3%A9(1)_fichiers/10318.svg" alt="Tâche" title="Tâche - Une tâche distincte." width="16" height="16" border="0" align="absmiddle">
+        </a>
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="P3R4-24" href="https://23gp3r4.atlassian.net/browse/P3R4-24">P3R4-24</a>
+</td>
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="P3R4-24" href="https://23gp3r4.atlassian.net/browse/P3R4-24">Faire le macro-planning</a>
+    </p>
+</td>
+                                            <td class="assignee">    <em>Non assigné</em>
+</td>
+                                            <td class="reporter">            <span class="tinylink"><a class="user-hover" rel="604e851881b82500681ec2b8" id="reporter_604e851881b82500681ec2b8" data-user="{&quot;accountId&quot;: &quot;604e851881b82500681ec2b8&quot;}" href="https://23gp3r4.atlassian.net/secure/ViewProfile.jspa?accountId=604e851881b82500681ec2b8">Amin Yekhlef</a></span>
+    </td>
+                                            <td class="priority">            <img src="Effectu%C3%A9(1)_fichiers/medium.svg" alt="Medium" title="Medium - Has the potential to affect progress." width="16" height="16" border="0" align="absmiddle">
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Terminé(e)&lt;/span&gt;">Terminé(e)</span>    </td>
+                                            <td class="resolution">    Terminé
+</td>
+                                            <td class="created"> <span title="28/janv./23 8:36 PM"><time datetime="2023-01-28T20:36:56+0100">28/janv./23</time></span> </td>
+                                            <td class="updated"> <span title="28/janv./23 9:46 PM"><time datetime="2023-01-28T21:46:23+0100">28/janv./23</time></span> </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10022" rel="10022" data-issuekey="P3R4-23" class="issuerow">
+                                            <td class="issuetype">    <a class="issue-link" data-issue-key="P3R4-23" href="https://23gp3r4.atlassian.net/browse/P3R4-23">
+            <img src="Effectu%C3%A9(1)_fichiers/10318.svg" alt="Tâche" title="Tâche - Une tâche distincte." width="16" height="16" border="0" align="absmiddle">
+        </a>
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="P3R4-23" href="https://23gp3r4.atlassian.net/browse/P3R4-23">P3R4-23</a>
+</td>
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="P3R4-23" href="https://23gp3r4.atlassian.net/browse/P3R4-23">Définir la thématique</a>
+    </p>
+</td>
+                                            <td class="assignee">    <em>Non assigné</em>
+</td>
+                                            <td class="reporter">            <span class="tinylink"><a class="user-hover" rel="604e851881b82500681ec2b8" id="reporter_604e851881b82500681ec2b8" data-user="{&quot;accountId&quot;: &quot;604e851881b82500681ec2b8&quot;}" href="https://23gp3r4.atlassian.net/secure/ViewProfile.jspa?accountId=604e851881b82500681ec2b8">Amin Yekhlef</a></span>
+    </td>
+                                            <td class="priority">            <img src="Effectu%C3%A9(1)_fichiers/medium.svg" alt="Medium" title="Medium - Has the potential to affect progress." width="16" height="16" border="0" align="absmiddle">
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Terminé(e)&lt;/span&gt;">Terminé(e)</span>    </td>
+                                            <td class="resolution">    Terminé
+</td>
+                                            <td class="created"> <span title="28/janv./23 8:36 PM"><time datetime="2023-01-28T20:36:44+0100">28/janv./23</time></span> </td>
+                                            <td class="updated"> <span title="28/janv./23 9:46 PM"><time datetime="2023-01-28T21:46:20+0100">28/janv./23</time></span> </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10015" rel="10015" data-issuekey="P3R4-16" class="issuerow">
+                                            <td class="issuetype">    <a class="issue-link" data-issue-key="P3R4-16" href="https://23gp3r4.atlassian.net/browse/P3R4-16">
+            <img src="Effectu%C3%A9(1)_fichiers/10303.svg" alt="Bug" title="Bug - Un problème ou une erreur." width="16" height="16" border="0" align="absmiddle">
+        </a>
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="P3R4-16" href="https://23gp3r4.atlassian.net/browse/P3R4-16">P3R4-16</a>
+</td>
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="P3R4-16" href="https://23gp3r4.atlassian.net/browse/P3R4-16">[NOTE CADRAGE] thématique est trop verbeuse et trop flou</a>
+    </p>
+</td>
+                                            <td class="assignee">    <em>Non assigné</em>
+</td>
+                                            <td class="reporter">            <span class="tinylink"><a class="user-hover" rel="70121:0b262333-cccd-4e5d-808a-9bd47c00dd9f" id="reporter_70121%3A0b262333-cccd-4e5d-808a-9bd47c00dd9f" data-user="{&quot;accountId&quot;: &quot;70121:0b262333-cccd-4e5d-808a-9bd47c00dd9f&quot;}" href="https://23gp3r4.atlassian.net/secure/ViewProfile.jspa?accountId=70121%3A0b262333-cccd-4e5d-808a-9bd47c00dd9f">fbab</a></span>
+    </td>
+                                            <td class="priority">            <img src="Effectu%C3%A9(1)_fichiers/medium.svg" alt="Medium" title="Medium - Has the potential to affect progress." width="16" height="16" border="0" align="absmiddle">
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Terminé(e)&lt;/span&gt;">Terminé(e)</span>    </td>
+                                            <td class="resolution">    Terminé
+</td>
+                                            <td class="created"> <span title="19/janv./23 1:22 PM"><time datetime="2023-01-19T13:22:51+0100">19/janv./23</time></span> </td>
+                                            <td class="updated"> <span title="24/janv./23 8:19 PM"><time datetime="2023-01-24T20:19:10+0100">24/janv./23</time></span> </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+        </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            </div>
+<script>
+require(["jquery"], function ($) {
+    // Prevent click events from doing stuff in this view
+    $(function(){
+        $('#printable-content *').unbind('click').click(function(e){ e.preventDefault() }).removeAttr('onclick');
+    });
+});
+</script>
+
+
+</body></html>
